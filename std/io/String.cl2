@@ -1,0 +1,1 @@
+var String = java("cpa.subos.io.IO").buffer;
