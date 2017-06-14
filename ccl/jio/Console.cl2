@@ -16,4 +16,4 @@ var println,printf,print,read;
     print = out.print;
 
     read = java("java.util.Scanner")(in).nextLine;
-}
+};

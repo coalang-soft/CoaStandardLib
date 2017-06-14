@@ -1,6 +1,6 @@
-def struct(array){
+var struct = {|array|
 	
-	def retFunc(){
+	return {||
 
 		var parameters = @;
 		var ret = [];
@@ -10,10 +10,8 @@ def struct(array){
 			ret.push(parameters.get(i), array.get(i));
 		}
 		
-		ret
+		return ret;
 		
-	}
-	
-	retFunc
+	};
     
-}
+};

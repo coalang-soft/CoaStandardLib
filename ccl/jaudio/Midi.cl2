@@ -2,14 +2,14 @@
 
 {
     var MidiSys = java("javax.sound.midi.MidiSystem");
-    def Synth(Midi){
+    var Synth = {|Midi|
         var synth = Midi.getSynthesizer();
         synth.open();
         
         var channels = array(synth.getChannels());
         channels.push(synth, "native");
         
-        channels
+        return channels;
     }
     
     Audio.push([
