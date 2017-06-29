@@ -15,5 +15,5 @@ Audio.Midi.setProperty("g", 79);
 Audio.Midi.setProperty("a", 81);
 Audio.Midi.setProperty("b", 83);
 
-Audio.Midi.setProperty("sharp", <note|note + 1>);
-Audio.Midi.setProperty("bsign", <note|note - 1>);
+Audio.Midi.setProperty("sharp", {|note| return note + 1;});
+Audio.Midi.setProperty("bsign", {|note| return note - 1;});

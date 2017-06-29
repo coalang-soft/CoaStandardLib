@@ -6,4 +6,4 @@ var jsAntLang = URL(AntLangPath).buildString("UTF-8");
 var antlang = eval.js(jsAntLang & ";new AntLangScriptEngine();");
 eval.setProperty("ant", antlang.run);
 eval.ant.setProperty("engine", antlang);
-}
+};
