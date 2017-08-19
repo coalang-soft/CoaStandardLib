@@ -31,3 +31,16 @@
 #builtin java
 #builtin @
 #builtin undefined
+
+//Operators
+#builtin add
+#builtin sub
+#builtin mul
+#builtin div
+#builtin pow
+#builtin concat
+
+//Control
+#builtin if
+#builtin while
+#builtin for
