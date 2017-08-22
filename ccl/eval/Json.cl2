@@ -1,0 +1,1 @@
+eval.setProperty("json", eval.js("JSON.parse"));
