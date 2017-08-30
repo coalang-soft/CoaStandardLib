@@ -10,6 +10,7 @@
 #alias > gtr
 #alias == equals
 #alias ! not
+#alias = set
 
 #alias => nvp
 #alias & concat
