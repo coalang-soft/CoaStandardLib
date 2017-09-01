@@ -16,4 +16,4 @@
     Audio.push(Clip.bind(
         java("sun.audio.AudioStream"), java("sun.audio.AudioPlayer")
     ), "Clip");
-};
+}

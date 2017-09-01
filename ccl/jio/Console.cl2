@@ -1,7 +1,7 @@
-#include ccl/jio/Stream.cl2
+#use Stream prototypes
 
 var stdin,stdout;
-var println,printf,print,read;
+var printf,print,read;
 {
     var System = java("java.lang.System");
 
@@ -17,3 +17,7 @@ var println,printf,print,read;
 
     read = java("java.util.Scanner")(in).nextLine;
 };
+
+prototypes.string.printf = ({|self,a...| printf(self,a);});
+prototypes.object.print = print;
+prototypes.object.println = println;

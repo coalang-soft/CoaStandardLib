@@ -4,6 +4,9 @@ var Thread;
 	var t = java("java.lang.Thread");
 	
 	Thread = {|f,name|
+        if(name.type == "undefined"){
+            
+        }
 		var ret = t(
 			r([
 				run:f

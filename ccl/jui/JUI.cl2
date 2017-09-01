@@ -29,4 +29,7 @@ var JUI;
 		FileChooser:java("javafx.stage.FileChooser"),
 		Font:java("javafx.scene.text.Font")
 	];
+
+	prototypes.object.juiImage = JUI.image("Image");
+
 };
