@@ -7,7 +7,7 @@ var OSM;
             URL("https://nominatim.openstreetmap.org/reverse?format=json&lat=" & lat.toString() & "&lon=" & lon.toString())
             .buildString("UTF-8")
         );
-    def map(lat,lon,width,height:width,zoom:5) =
+    def map(lat,lon,width:600,height:width,zoom:5) =
         URL(
             "http://geomap.nagvis.org/?module=map&&lat=" & lat.toString()
             & "&lon=" & lon.toString()

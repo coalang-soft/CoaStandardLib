@@ -1,4 +1,4 @@
-#include ccl/jui/Chart.cl2
+#use Launcher Chart
 
 var XYChart = JUI.chart("XYChart");
 var XYSeries;

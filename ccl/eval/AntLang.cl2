@@ -1,4 +1,4 @@
-#use URL
+#use URL prototypes
 
 if(eval.ant.type == "error"){
 var AntLangPath = "https://rawgit.com/AntLang-Software/jsAntLang/master/AntLang.js";
@@ -8,3 +8,5 @@ var antlang = eval.js(jsAntLang & ";new AntLangScriptEngine();");
 eval.setProperty("ant", antlang.run);
 eval.ant.setProperty("engine", antlang);
 }
+
+prototypes.object.ant = ({|expr| return eval.ant(expr);});

@@ -14,3 +14,6 @@ prototypes.string.glosbeSimpleTranslate = ({|phrase,from,to|
     }
     return ({|i| return results.get(i).phrase;}).array(results.length());
 });
+prototypes.string.glosbeSingleTranslate = ({|phrase,from,to|
+    return phrase.glosbeSimpleTranslate(from,to).0.text;
+});

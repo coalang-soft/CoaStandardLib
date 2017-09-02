@@ -1,14 +1,21 @@
-#include ccl/jui/XYChart.cl2
+#use XYChart prototypes
 
 var SimpleChart;
 {
-	var NumAxis = JUI.chart("NumberAxis");
+	var NumberAxis = JUI.chart("NumberAxis");
 	
-	var make = {|NumberAxis,x,y,to,from:0,type:"LineChart"|
+	SimpleChart = ({|x,y,to,from:0,type:"LineChart"|
 		var chart = JUI.chart(type)(NumberAxis(),NumberAxis());
 		chart.getData().add(XYSeries(x,y,from,to));
 		return chart;
-	};
-	
-	SimpleChart = make.bind(NumAxis);
+	});
+
+};
+
+{
+    def ret(x) = x;
+
+    prototypes.object.juiPlot = ({|x,y,type:"LineChart",from:0,to:100|
+        return SimpleChart(x,y,to,from,type);
+    }).bind(ret);
 };

@@ -1,3 +1,5 @@
+#use prototypes
+
 var struct = {|array|
 	
 	return {||
@@ -15,3 +17,5 @@ var struct = {|array|
 	};
     
 };
+
+prototypes.array.struct = struct;

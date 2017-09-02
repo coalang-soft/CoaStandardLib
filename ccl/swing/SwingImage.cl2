@@ -1,7 +1,13 @@
 #use prototypes
 
 var SwingImage = [
-    make:java("javax.imageio.ImageIO").read,
+    make:{|in|
+        var res = java("javax.imageio.ImageIO").read(in);
+        if(res.type == "error"){
+            res = java("javax.imageio.ImageIO").read(in.reader());
+        }
+        return res;
+    },
     icon:java("javax.swing.ImageIcon")
 ];
 
