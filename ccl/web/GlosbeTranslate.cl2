@@ -7,13 +7,11 @@ def GlosbeTranslate(phrase,from,to) = eval.json(URL(
 ).buildString("UTF-8"));
 
 prototypes.string.glosbeTranslate = GlosbeTranslate;
-prototypes.string.glosbeSimpleTranslate = ({|phrase,from,to|
+def prototypes.string.glosbeSimpleTranslate(phrase,from,to){
     var results = GlosbeTranslate(phrase,from,to).tuc;
     if(results.type == "error"){
         return results;
     }
     return ({|i| return results.get(i).phrase;}).array(results.length());
-});
-prototypes.string.glosbeSingleTranslate = ({|phrase,from,to|
-    return phrase.glosbeSimpleTranslate(from,to).0.text;
-});
+};
+def prototypes.string.glosbeSingleTranslate(phrase,from,to) = phrase.glosbeSimpleTranslate(from,to).0.text;

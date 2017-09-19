@@ -32,6 +32,8 @@ var OSM;
     ];
 };
 
-prototypes.object.osmMap = ({|self,extra...| return OSM.map.bind(self.lat,self.lon).invoke(extra);});
-prototypes.object.osmLiveMap = ({|self,extra...| return OSM.liveMap.bind(self.lat,self.lon).invoke(extra);});
+def prototypes.object.osmMap(self,extra...) = OSM.map.bind(self.lat,self.lon).invoke(extra);
+def prototypes.object.osmLiveMap(self,extra...) = OSM.liveMap.bind(self.lat,self.lon).invoke(extra);
 prototypes.object.osmQuery = OSM.query;
+def prototypes.object.osmData(self) = OSM.data(self.lat,self.lon);
+def prototypes.string.osmMap(self,extra...) = self.osmQuery().0.osmMap.invoke(extra);

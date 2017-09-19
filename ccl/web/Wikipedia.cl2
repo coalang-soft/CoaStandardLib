@@ -26,4 +26,4 @@ def Wikipedia(lang:Locale.defaultLanguage){
     return [query:query];
 };
 
-prototypes.object.wikipediaQuery = ({|self,args...| return Wikipedia.invoke(args).query(self);});
+def prototypes.object.wikipediaQuery(self,args...) = Wikipedia.invoke(args).query(self);
